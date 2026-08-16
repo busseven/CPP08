@@ -6,7 +6,15 @@
 /*   By: busseven <busseven@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/16 18:21:09 by busseven          #+#    #+#             */
-/*   Updated: 2026/08/16 18:21:10 by busseven         ###   ########.fr       */
+/*   Updated: 2026/08/16 18:28:43 by busseven         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "easyfind.tpp"
+#include <vector>
+
+int main(void)
+{
+	std::vector<int> v1(8);
+	
+}

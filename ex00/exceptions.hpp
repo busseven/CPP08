@@ -6,7 +6,7 @@
 /*   By: busseven <busseven@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/16 18:11:36 by busseven          #+#    #+#             */
-/*   Updated: 2026/08/16 18:15:49 by busseven         ###   ########.fr       */
+/*   Updated: 2026/08/16 18:28:23 by busseven         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,4 +16,4 @@
 class NotFoundException : public std::exception 
 {
 	virtual const char* what() const throw();
-}
+};
