@@ -1,18 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   exceptions.cpp                                     :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: busseven <busseven@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/08/16 18:16:11 by busseven          #+#    #+#             */
-/*   Updated: 2026/08/16 18:20:47 by busseven         ###   ########.fr       */
+/*   Created: 2026/08/16 18:21:09 by busseven          #+#    #+#             */
+/*   Updated: 2026/08/16 18:21:10 by busseven         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "exceptions.hpp"
-
-const char *NotFoundException::what() const throw()
-{
-	return ("Integer not found");
-}
