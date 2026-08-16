@@ -1,26 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   easyfind.tpp                                       :+:      :+:    :+:   */
+/*   exceptions.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: busseven <busseven@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/08/16 15:04:12 by busseven          #+#    #+#             */
-/*   Updated: 2026/08/16 18:17:39 by busseven         ###   ########.fr       */
+/*   Created: 2026/08/16 18:11:36 by busseven          #+#    #+#             */
+/*   Updated: 2026/08/16 18:15:49 by busseven         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <algorithm>
-#include <iterator>
-#include "exceptions.hpp"
+#include <exception>
+#include <string>
 
-template< typename T >
-typename T::iterator	easyfind(T cont, int i)
+class NotFoundException : public std::exception 
 {
-	typename T::iterator iter;
-
-	iter = std::find(cont.begin(), cont.end(), i);
-	if(iter == cont.end())
-		throw NotFoundException;
-	return(iter);
+	virtual const char* what() const throw();
 }

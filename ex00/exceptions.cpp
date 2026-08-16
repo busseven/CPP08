@@ -1,26 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   easyfind.tpp                                       :+:      :+:    :+:   */
+/*   exceptions.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: busseven <busseven@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/08/16 15:04:12 by busseven          #+#    #+#             */
-/*   Updated: 2026/08/16 18:17:39 by busseven         ###   ########.fr       */
+/*   Created: 2026/08/16 18:16:11 by busseven          #+#    #+#             */
+/*   Updated: 2026/08/16 18:17:22 by busseven         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <algorithm>
-#include <iterator>
 #include "exceptions.hpp"
 
-template< typename T >
-typename T::iterator	easyfind(T cont, int i)
+const char *NotFoundException::what() const throw()
 {
-	typename T::iterator iter;
-
-	iter = std::find(cont.begin(), cont.end(), i);
-	if(iter == cont.end())
-		throw NotFoundException;
-	return(iter);
+	return ("Number not found in container");
 }
