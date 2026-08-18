@@ -6,16 +6,19 @@
 /*   By: busseven <busseven@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/16 18:21:09 by busseven          #+#    #+#             */
-/*   Updated: 2026/08/18 10:56:49 by busseven         ###   ########.fr       */
+/*   Updated: 2026/08/18 11:19:37 by busseven         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "easyfind.tpp"
 #include <vector>
+#include <stack>
 #include <iostream>
 
 int main(void)
 {
+	std::cout << "TESTS" << std::endl;
+	std::cout << "Vector" << std::endl;
 	std::vector<int> v;
 	for(int i = 0; i < 8; i++)
 		v.push_back(i);
