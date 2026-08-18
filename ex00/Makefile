@@ -6,17 +6,17 @@
 #    By: busseven <busseven@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/08/16 14:53:47 by busseven          #+#    #+#              #
-#    Updated: 2026/08/16 15:02:49 by busseven         ###   ########.fr        #
+#    Updated: 2026/08/18 10:32:20 by busseven         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS =
+SRCS = main.cpp
 CC = c++
 CXX = c++
 OBJS = $(SRCS:.cpp=.o)
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
-NAME = convert
+NAME = test
 
 all: $(NAME)
 

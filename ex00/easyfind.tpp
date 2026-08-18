@@ -6,7 +6,7 @@
 /*   By: busseven <busseven@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/16 15:04:12 by busseven          #+#    #+#             */
-/*   Updated: 2026/08/16 18:17:39 by busseven         ###   ########.fr       */
+/*   Updated: 2026/08/18 10:32:01 by busseven         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,6 @@ typename T::iterator	easyfind(T cont, int i)
 
 	iter = std::find(cont.begin(), cont.end(), i);
 	if(iter == cont.end())
-		throw NotFoundException;
+		throw NotFoundException();
 	return(iter);
 }
