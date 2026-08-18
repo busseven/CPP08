@@ -6,7 +6,7 @@
 /*   By: busseven <busseven@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/16 18:21:09 by busseven          #+#    #+#             */
-/*   Updated: 2026/08/18 12:29:42 by busseven         ###   ########.fr       */
+/*   Updated: 2026/08/18 13:54:30 by busseven         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 #include <vector>
 #include <stack>
 #include <list>
+#include <forward_list>
 #include <iostream>
 
 int main(void)
@@ -23,4 +24,6 @@ int main(void)
 	run_container_test<std::deque<int> >("DEQUE TESTS", 80, 10, 30, 80);
 	std::cout << std::endl;
 	run_container_test<std::list<int> >("LIST TESTS", 10, 2, 8, 42);
+	std::cout << std::endl;
+	run_container_test<std::forward_list<int> >("LIST TESTS", 10, 2, 8, 42);
 }
