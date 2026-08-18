@@ -6,11 +6,11 @@
 #    By: busseven <busseven@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/08/16 14:53:47 by busseven          #+#    #+#              #
-#    Updated: 2026/08/18 10:32:20 by busseven         ###   ########.fr        #
+#    Updated: 2026/08/18 10:37:34 by busseven         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS = main.cpp
+SRCS = exceptions.cpp main.cpp
 CC = c++
 CXX = c++
 OBJS = $(SRCS:.cpp=.o)

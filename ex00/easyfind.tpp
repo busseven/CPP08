@@ -6,7 +6,7 @@
 /*   By: busseven <busseven@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/16 15:04:12 by busseven          #+#    #+#             */
-/*   Updated: 2026/08/18 10:32:01 by busseven         ###   ########.fr       */
+/*   Updated: 2026/08/18 10:44:57 by busseven         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 #include "exceptions.hpp"
 
 template< typename T >
-typename T::iterator	easyfind(T cont, int i)
+typename T::iterator	easyfind(T &cont, int i)
 {
 	typename T::iterator iter;
 

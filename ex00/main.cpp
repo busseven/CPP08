@@ -6,25 +6,26 @@
 /*   By: busseven <busseven@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/16 18:21:09 by busseven          #+#    #+#             */
-/*   Updated: 2026/08/18 10:30:44 by busseven         ###   ########.fr       */
+/*   Updated: 2026/08/18 10:43:27 by busseven         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "easyfind.tpp"
 #include <vector>
+#include <iostream>
 
 int main(void)
 {
-	std::vector<int> v1(8);
-	std::vector<int>::iterator it = v1.begin();
-	for(int i = 0; v1.at(i); i++)
-		v1.insert(it++, i);
+	std::vector<int> v1;
+	for(int i = 0; i < 8; i++)
+		v1.push_back(i);
 	try
 	{
-		
+		std::vector<int>::iterator found = easyfind(v1, 3);
+		std::cout << *found << std::endl;
 	}
-	catch(std::exception)
+	catch(std::exception &e)
 	{
-		
+		std::cout << e.what() << std::endl;
 	}
 }
