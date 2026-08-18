@@ -6,7 +6,7 @@
 /*   By: busseven <busseven@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/16 18:21:09 by busseven          #+#    #+#             */
-/*   Updated: 2026/08/18 11:30:49 by busseven         ###   ########.fr       */
+/*   Updated: 2026/08/18 11:38:35 by busseven         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int main(void)
 	{
 		announce(3);
 		std::vector<int>::iterator found = easyfind(v, 3);
-		std::cout << *found << std::endl;
+		std::cout << "Found " << *found << std::endl;
 		announce(42);
 		found = easyfind(v, 42);
 	}
