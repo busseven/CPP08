@@ -6,7 +6,7 @@
 /*   By: busseven <busseven@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/16 15:04:12 by busseven          #+#    #+#             */
-/*   Updated: 2026/08/18 12:24:23 by busseven         ###   ########.fr       */
+/*   Updated: 2026/08/18 12:36:32 by busseven         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,14 @@ void run_container_test(const std::string& testname, int fill_limit, int step, i
 	T cont;
 	for(int i = 0; i < fill_limit; i+=step)
 		cont.push_back(i);
+	std::cout << "Elements: ";
+	typename T::const_iterator it = cont.begin();
+	for(int i = 0; i < fill_limit && it != cont.end(); i+=step)
+	{
+		std::cout << *it << " ";
+		std::advance(it, 1);
+	}
+	std::cout << std::endl;
 	try
 	{
 		std::cout << "Finding " << target1 << std::endl;
