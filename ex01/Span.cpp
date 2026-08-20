@@ -6,11 +6,12 @@
 /*   By: busseven <busseven@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/20 09:46:12 by busseven          #+#    #+#             */
-/*   Updated: 2026/08/20 09:48:52 by busseven         ###   ########.fr       */
+/*   Updated: 2026/08/20 10:05:14 by busseven         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Span.hpp"
+#include <algorithm>
 
 // Constructors
 Span::Span()
@@ -33,7 +34,7 @@ Span::Span(const Span &copy)
 // Destructor
 Span::~Span()
 {
-	std::cout << "\e[0;31mDestructor called of Span\e[0m" << std::endl;
+	;
 }
 
 
@@ -41,7 +42,8 @@ Span::~Span()
 Span & Span::operator=(const Span &assign)
 {
 	this->v.reserve(assign.v.capacity());
-	std::copy(assign.v.begin(), assign.v.end(), std::back_inserter(this->v));
+	this->v = assign.v;
+	//std::copy(assign.v.begin(), assign.v.end(), std::back_inserter(this->v));
 	this->stored = 0;
 	return *this;
 }
@@ -61,4 +63,24 @@ void Span::addNumber(int i)
 	if(this->stored >= this->v.capacity())
 		throw CapacityExceededException();
 	this->v.push_back(i);
+}
+
+int Span::longestSpan()
+{
+	std::vector<int> temp;
+	int	span;
+	
+	temp = this->v;
+	std::sort(temp.begin(), temp.end());
+	span = *temp.end() - *temp.begin();
+	return (span);
+}
+
+int Span::shortestSpan()
+{
+	std::vector<int> temp;
+	int	span;
+	int n;
+	temp = this->v;
+	std::sort(temp.begin(), temp.end());
 }
