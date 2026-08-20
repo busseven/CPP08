@@ -6,7 +6,7 @@
 /*   By: busseven <busseven@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/20 09:46:16 by busseven          #+#    #+#             */
-/*   Updated: 2026/08/20 10:59:22 by busseven         ###   ########.fr       */
+/*   Updated: 2026/08/20 12:19:20 by busseven         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ class Span
 
 		Span & operator=(const Span &assign);
 		void addNumber(int i);
-		void insert_range(int f, int l);
+		void addRange(int f, int l);
 		int shortestSpan();
 		int longestSpan();
 		
