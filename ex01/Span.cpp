@@ -6,7 +6,7 @@
 /*   By: busseven <busseven@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/20 09:46:12 by busseven          #+#    #+#             */
-/*   Updated: 2026/08/20 10:45:25 by busseven         ###   ########.fr       */
+/*   Updated: 2026/08/20 11:01:41 by busseven         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,6 +62,11 @@ void Span::addNumber(int i)
 	if(this->stored >= this->v.capacity())
 		throw CapacityExceededException();
 	this->v.push_back(i);
+}
+
+void Span::insert_range(int f, int l)
+{
+	this->v.insert(this->v.end(), f, l);
 }
 
 int Span::longestSpan()
