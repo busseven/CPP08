@@ -6,7 +6,7 @@
 /*   By: busseven <busseven@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/20 09:46:12 by busseven          #+#    #+#             */
-/*   Updated: 2026/08/20 10:05:14 by busseven         ###   ########.fr       */
+/*   Updated: 2026/08/20 10:39:25 by busseven         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,6 +81,16 @@ int Span::shortestSpan()
 	std::vector<int> temp;
 	int	span;
 	int n;
+	n = 0;
+	span = 0;
 	temp = this->v;
 	std::sort(temp.begin(), temp.end());
+
+	for(int i = 1; i < this->v.capacity(); i++)
+	{
+		n = this->v[i] - this->v[i - 1];
+		if(n < span)
+			span = n;
+	}
+	return (span);
 }
