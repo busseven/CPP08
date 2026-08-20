@@ -5,10 +5,11 @@
 #                                                     +:+ +:+         +:+      #
 #    By: busseven <busseven@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2026/08/16 14:53:47 by busseven          #+#    #+#              #
-#    Updated: 2026/08/20 09:03:46 by busseven         ###   ########.fr        #
+#    Created: 2026/08/20 09:46:28 by busseven          #+#    #+#              #
+#    Updated: 2026/08/20 09:46:29 by busseven         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
+
 
 SRCS = Span.cpp main.cpp
 CC = c++

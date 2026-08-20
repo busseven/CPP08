@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Span.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: busseven <busseven@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/08/20 09:46:12 by busseven          #+#    #+#             */
+/*   Updated: 2026/08/20 09:48:52 by busseven         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Span.hpp"
 
 // Constructors
@@ -42,4 +54,11 @@ const char *Span::CapacityExceededException::what() const throw()
 const char *Span::NotEnoughNumbersException::what() const throw()
 {
 	return ("Not enough numbers to find span");
+}
+
+void Span::addNumber(int i)
+{
+	if(this->stored >= this->v.capacity())
+		throw CapacityExceededException();
+	this->v.push_back(i);
 }
