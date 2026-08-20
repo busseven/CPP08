@@ -6,7 +6,7 @@
 /*   By: busseven <busseven@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/20 09:46:12 by busseven          #+#    #+#             */
-/*   Updated: 2026/08/20 10:39:25 by busseven         ###   ########.fr       */
+/*   Updated: 2026/08/20 10:42:58 by busseven         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,9 +67,11 @@ void Span::addNumber(int i)
 
 int Span::longestSpan()
 {
+	if(stored <= 1)
+		throw NotEnoughNumbersException();
+	
 	std::vector<int> temp;
 	int	span;
-	
 	temp = this->v;
 	std::sort(temp.begin(), temp.end());
 	span = *temp.end() - *temp.begin();
@@ -78,6 +80,9 @@ int Span::longestSpan()
 
 int Span::shortestSpan()
 {
+	if(stored <= 1)
+		throw NotEnoughNumbersException();
+
 	std::vector<int> temp;
 	int	span;
 	int n;
