@@ -8,16 +8,14 @@
 class Span
 {
 	public:
-		// Constructors
 		Span();
 		Span(const Span &copy);
-		
-		// Destructor
 		~Span();
-		
-		// Operators
+
 		Span & operator=(const Span &assign);
-		void addNumber
+		void addNumber(int i);
+		int shortestSpan();
+		int longestSpan();
 		
 	private:
 		std::vector<int> v;
