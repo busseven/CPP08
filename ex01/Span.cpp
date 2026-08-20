@@ -6,7 +6,7 @@
 /*   By: busseven <busseven@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/20 09:46:12 by busseven          #+#    #+#             */
-/*   Updated: 2026/08/20 10:42:58 by busseven         ###   ########.fr       */
+/*   Updated: 2026/08/20 10:45:25 by busseven         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,6 @@ Span & Span::operator=(const Span &assign)
 {
 	this->v.reserve(assign.v.capacity());
 	this->v = assign.v;
-	//std::copy(assign.v.begin(), assign.v.end(), std::back_inserter(this->v));
 	this->stored = 0;
 	return *this;
 }
