@@ -3,6 +3,7 @@
 
 # include <iostream>
 # include <string>
+# include <vector>
 
 class Span
 {
@@ -16,9 +17,10 @@ class Span
 		
 		// Operators
 		Span & operator=(const Span &assign);
+		void addNumber
 		
 	private:
-		
+		std::vector<int> v;
 };
 
 #endif
