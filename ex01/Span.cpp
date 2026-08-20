@@ -6,7 +6,7 @@
 /*   By: busseven <busseven@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/20 09:46:12 by busseven          #+#    #+#             */
-/*   Updated: 2026/08/20 11:04:53 by busseven         ###   ########.fr       */
+/*   Updated: 2026/08/20 11:12:47 by busseven         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,7 @@ void Span::addNumber(int i)
 
 void Span::insert_range(int f, int l)
 {
-	if((l - f - 1) > (this->v.capacity() - this->stored))
+	if((l - f - 1) > (int)(this->v.capacity() - this->stored))
 		throw CapacityExceededException();
 	this->v.insert(this->v.end(), f, l);
 }
@@ -81,7 +81,7 @@ int Span::longestSpan()
 	int	span;
 	temp = this->v;
 	std::sort(temp.begin(), temp.end());
-	span = *temp.end() - *temp.begin();
+	span = temp.back() - *temp.begin();
 	return (span);
 }
 
@@ -94,13 +94,13 @@ int Span::shortestSpan()
 	int	span;
 	int n;
 	n = 0;
-	span = 0;
 	temp = this->v;
 	std::sort(temp.begin(), temp.end());
+	span = temp[1] - temp[0];
 
-	for(int i = 1; i < this->v.capacity(); i++)
+	for(int i = 1; i < (int)this->v.capacity(); i++)
 	{
-		n = this->v[i] - this->v[i - 1];
+		n = temp[i] - temp[i - 1];
 		if(n < span)
 			span = n;
 	}
