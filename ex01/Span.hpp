@@ -18,8 +18,18 @@ class Span
 		int shortestSpan();
 		int longestSpan();
 		
+	class CapacityExceededException : public std::exception 
+	{
+		virtual const char* what() const throw();
+	};
+
+	class NotEnoughNumbersException : public std::exception 
+	{
+		virtual const char* what() const throw();
+	};
 	private:
 		std::vector<int> v;
+		unsigned int stored;
 };
 
 #endif
