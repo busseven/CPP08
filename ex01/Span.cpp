@@ -34,3 +34,12 @@ Span & Span::operator=(const Span &assign)
 	return *this;
 }
 
+const char *Span::CapacityExceededException::what() const throw()
+{
+	return ("Maximum storage exceeded");
+}
+
+const char *Span::NotEnoughNumbersException::what() const throw()
+{
+	return ("Not enough numbers to find span");
+}
