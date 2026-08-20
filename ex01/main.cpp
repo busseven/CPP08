@@ -6,11 +6,19 @@
 /*   By: busseven <busseven@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/20 09:46:37 by busseven          #+#    #+#             */
-/*   Updated: 2026/08/20 12:43:41 by busseven         ###   ########.fr       */
+/*   Updated: 2026/08/20 12:53:50 by busseven         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Span.hpp"
+
+void test_addNumber()
+{
+	Span sp = Span(3);
+	sp.addNumber(-21);
+	sp.addNumber(0);
+	sp.addNumber(7);	
+}
 
 int main()
 {
@@ -24,16 +32,6 @@ int main()
 	std::cout << sp.shortestSpan() << std::endl;
 	std::cout << sp.longestSpan() << std::endl;
 
-	try
-	{
-		Span sp2 = Span(10);
-		sp2.addNumber(-8);
-		std::cout << sp2.shortestSpan() << std::endl;
-		std::cout << sp2.longestSpan() << std::endl;
-	}
-	catch(std::exception &e)
-	{
-		std::cout << e.what() << std::endl;
-	}
+	test_addNumber();
 	return (0);
 }
