@@ -6,7 +6,7 @@
 /*   By: busseven <busseven@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/20 09:46:12 by busseven          #+#    #+#             */
-/*   Updated: 2026/08/20 12:19:12 by busseven         ###   ########.fr       */
+/*   Updated: 2026/08/20 12:41:43 by busseven         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ Span::Span()
 
 Span::Span(unsigned int N)
 {
-	this->v.reserve(N);
+	this->capacity = N;
 	this->stored = 0;
 }
 
@@ -41,7 +41,7 @@ Span::~Span()
 // Operators
 Span & Span::operator=(const Span &assign)
 {
-	this->v.reserve(assign.v.capacity());
+	this->v.reserve(assign.getCapacity());
 	this->v = assign.v;
 	this->stored = this->v.size();
 	return *this;
@@ -59,7 +59,7 @@ const char *Span::NotEnoughNumbersException::what() const throw()
 
 void Span::addNumber(int i)
 {
-	if(this->stored >= this->v.capacity())
+	if(this->stored >= this->capacity)
 		throw CapacityExceededException();
 	this->v.push_back(i);
 	this->stored++;
@@ -67,12 +67,12 @@ void Span::addNumber(int i)
 
 void Span::addRange(int f, int l)
 {
-	if((l - f - 1) > (int)(this->v.capacity() - this->stored))
+	if((l - f - 1) > (int)(this->capacity - this->stored))
 		throw CapacityExceededException();
 	this->v.insert(this->v.end(), f, l);
 }
 
-int Span::longestSpan()
+int Span::longestSpan() const
 {
 	if(stored <= 1)
 		throw NotEnoughNumbersException();
@@ -85,7 +85,7 @@ int Span::longestSpan()
 	return (span);
 }
 
-int Span::shortestSpan()
+int Span::shortestSpan() const
 {
 	if(stored <= 1)
 		throw NotEnoughNumbersException();
@@ -105,4 +105,9 @@ int Span::shortestSpan()
 			span = n;
 	}
 	return (span);
+}
+
+unsigned int Span::getCapacity() const
+{
+	return(this->capacity);
 }

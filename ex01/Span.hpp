@@ -6,7 +6,7 @@
 /*   By: busseven <busseven@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/20 09:46:16 by busseven          #+#    #+#             */
-/*   Updated: 2026/08/20 12:19:20 by busseven         ###   ########.fr       */
+/*   Updated: 2026/08/20 12:40:06 by busseven         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,9 @@ class Span
 		Span & operator=(const Span &assign);
 		void addNumber(int i);
 		void addRange(int f, int l);
-		int shortestSpan();
-		int longestSpan();
+		int shortestSpan() const;
+		int longestSpan() const;
+		unsigned int getCapacity() const;
 		
 	class CapacityExceededException : public std::exception 
 	{
@@ -43,6 +44,7 @@ class Span
 	private:
 		std::vector<int> v;
 		unsigned int stored;
+		unsigned int capacity;
 };
 
 #endif
