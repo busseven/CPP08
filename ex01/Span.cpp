@@ -27,7 +27,8 @@ Span::~Span()
 // Operators
 Span & Span::operator=(const Span &assign)
 {
-	(void) assign;
+	this->v.reserve(assign.v.capacity());
+	std::copy(assign.v.begin(), assign.v.end(), std::back_inserter(this->v));
 	return *this;
 }
 
