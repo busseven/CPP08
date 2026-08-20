@@ -3,13 +3,17 @@
 // Constructors
 Span::Span()
 {
-	std::cout << "\e[0;33mDefault Constructor called of Span\e[0m" << std::endl;
+	;
+}
+
+Span::Span(unsigned int N)
+{
+	this->v.reserve(N);
 }
 
 Span::Span(const Span &copy)
 {
-	(void) copy;
-	std::cout << "\e[0;33mCopy Constructor called of Span\e[0m" << std::endl;
+	*this = copy;
 }
 
 
