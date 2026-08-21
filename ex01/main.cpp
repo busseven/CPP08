@@ -6,11 +6,27 @@
 /*   By: busseven <busseven@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/20 09:46:37 by busseven          #+#    #+#             */
-/*   Updated: 2026/08/20 12:57:57 by busseven         ###   ########.fr       */
+/*   Updated: 2026/08/21 09:14:19 by busseven         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Span.hpp"
+
+void test_aLotOfNumbers()
+{
+	Span sp = Span(200000);
+	for(int i = 0; i < 200000; i++)
+		sp.addNumber(i);
+	std::cout << sp.shortestSpan() << std::endl;
+	std::cout << sp.longestSpan() << std::endl;
+}
+
+void test_longestSpan()
+{
+	Span sp = Span(10);
+	sp.addNumber(11);
+	sp.shortestSpan();
+}
 
 void test_shortestSpan()
 {
@@ -42,7 +58,30 @@ int main()
 	try
 	{
 		test_addNumber();
+	}
+	catch(std::exception &e)
+	{
+		std::cout << e.what() << std::endl;
+	}
+	try
+	{
 		test_shortestSpan();
+	}
+	catch(std::exception &e)
+	{
+		std::cout << e.what() << std::endl;
+	}
+	try
+	{
+		test_longestSpan();
+	}
+	catch(std::exception &e)
+	{
+		std::cout << e.what() << std::endl;
+	}
+	try
+	{
+		test_aLotOfNumbers();
 	}
 	catch(std::exception &e)
 	{
