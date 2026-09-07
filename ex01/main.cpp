@@ -6,7 +6,7 @@
 /*   By: busseven <busseven@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/20 09:46:37 by busseven          #+#    #+#             */
-/*   Updated: 2026/09/07 12:58:19 by busseven         ###   ########.fr       */
+/*   Updated: 2026/09/07 13:34:26 by busseven         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ void test_addRange()
 	std::cout << "Shortest span: " << sp.shortestSpan() << std::endl;
 	std::cout << "Longest span: " << sp.longestSpan() << std::endl;
 }
+
 void test_aLotOfNumbers()
 {
 	Span sp = Span(200000);
@@ -62,7 +63,7 @@ int main()
 	sp.addNumber(17);
 	sp.addNumber(9);
 	sp.addNumber(11);
-	std::cout << "Soan: " << sp << std::endl;
+	std::cout << "Span: " << sp << std::endl;
 	std::cout << "Shortest span: " << sp.shortestSpan() << std::endl;
 	std::cout << "Longest span: " << sp.longestSpan() << std::endl;
 	try
