@@ -23,4 +23,29 @@ class MutantStack : public std::stack<T, Container>
 		
 };
 
+template <typename T, typename Container>
+MutantStack<T, Container>::MutantStack()
+{
+	;
+}
+
+template <typename T, typename Container>
+MutantStack<T, Container>::MutantStack(const MutantStack& copy)
+{
+	*this = copy;
+}
+
+template <typename T, typename Container>
+MutantStack<T, Container>::~MutantStack()
+{
+	;
+}
+
+template <typename T, typename Container>
+MutantStack<T, Container>& MutantStack<T, Container>::operator=(const MutantStack &copy)
+{
+	std::stack<T, Container>::operator=(copy);
+	return *this;
+}
+
 #endif
