@@ -69,7 +69,8 @@ void Span::addRange(int f, int l)
 {
 	if((l - f) > (int)(this->capacity - this->stored))
 		throw CapacityExceededException();
-	this->v.insert(this->v.end(), f, l);
+	for(int i = f; i <= l; i++)
+		this->v.push_back(i);
 	stored = l - f;
 }
 
