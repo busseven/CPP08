@@ -6,7 +6,7 @@
 /*   By: busseven <busseven@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/07 12:40:52 by busseven          #+#    #+#             */
-/*   Updated: 2026/09/07 15:47:49 by busseven         ###   ########.fr       */
+/*   Updated: 2026/09/07 15:51:18 by busseven         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,31 +39,5 @@ int main()
     }
     std::stack<int> s(mstack);
 
-    std::cout << std::endl;
-    std::cout << "LIST TESTS" << std::endl;
-    std::list<int> mlist;
-    mlist.push_back(5);
-    mlist.push_back(17);
-    std::cout << mlist.back() << std::endl;
-    mlist.pop_back();
-    std::cout << mlist.size() << std::endl;
-
-    mlist.push_back(3);
-    mlist.push_back(5);
-    mlist.push_back(737);
-    mlist.push_back(0);
-
-    std::list<int>::iterator lit = mlist.begin();
-    std::list<int>::iterator lite = mlist.end();
-
-    ++lit;
-    --lit;
-    while (lit != lite)
-    {
-        std::cout << *lit << std::endl;
-        ++lit;
-    }
-    std::list<int> ls(mlist);
-
-    return 0;
+    return (0);
 }
