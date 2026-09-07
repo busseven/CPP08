@@ -6,7 +6,7 @@
 /*   By: busseven <busseven@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/20 09:46:12 by busseven          #+#    #+#             */
-/*   Updated: 2026/08/21 09:25:56 by busseven         ###   ########.fr       */
+/*   Updated: 2026/09/07 13:03:02 by busseven         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,7 @@ void Span::addRange(int f, int l)
 		throw CapacityExceededException();
 	for(int i = f; i <= l; i++)
 		this->v.push_back(i);
-	stored = l - f;
+	stored = l - f + 1;
 }
 
 int Span::longestSpan() const
@@ -112,4 +112,26 @@ int Span::shortestSpan() const
 unsigned int Span::getCapacity() const
 {
 	return(this->capacity);
+}
+
+unsigned int Span::getStored() const
+{
+	return(this->stored);
+}
+
+unsigned int Span::getIndex(int i) const
+{
+	return(this->v[i]);
+}
+
+std::ostream & operator<<(std::ostream &stream, const Span &object)
+{
+	for(unsigned int i = 0; i < object.getStored(); i++)
+	{
+		stream << object.getIndex(i);
+		if(i == object.getStored() - 1)
+			break ;
+		stream << ",";
+	}
+	return(stream);
 }
