@@ -6,7 +6,7 @@
 /*   By: busseven <busseven@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/07 12:40:52 by busseven          #+#    #+#             */
-/*   Updated: 2026/09/07 15:51:18 by busseven         ###   ########.fr       */
+/*   Updated: 2026/09/07 16:17:56 by busseven         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 #include <list>
 #include <deque>
 #include <vector>
+#include <string>
+#include "MutantStack.tpp"
 
 int main()
 {
@@ -38,6 +40,9 @@ int main()
     ++it;
     }
     std::stack<int> s(mstack);
+    tests<std::list <int> >("LIST");
+    tests<std::deque <int> >("DEQUE");
+    tests<std::vector <int> >("VECTOR");
 
     return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: busseven <busseven@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/07 15:51:37 by busseven          #+#    #+#             */
-/*   Updated: 2026/09/07 15:59:18 by busseven         ###   ########.fr       */
+/*   Updated: 2026/09/07 16:17:28 by busseven         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,8 @@ void tests(std::string str)
     cont.push_back(737);
     cont.push_back(0);
 
-    Container::iterator it = cont.begin();
-    Container::iterator ite = cont.end();
+    typename Container::iterator it = cont.begin();
+    typename Container::iterator ite = cont.end();
 
     ++it;
     --it;
