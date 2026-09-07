@@ -4,6 +4,7 @@
 # include <iostream>
 # include <string>
 # include <stack>
+# include <deque>
 
 template <typename T, typename Container = std::deque<T> >
 class MutantStack : public std::stack<T, Container>
