@@ -6,7 +6,7 @@
 /*   By: busseven <busseven@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/20 09:46:12 by busseven          #+#    #+#             */
-/*   Updated: 2026/09/07 13:03:02 by busseven         ###   ########.fr       */
+/*   Updated: 2026/09/08 14:36:29 by busseven         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,14 @@
 Span::Span()
 {
 	this->stored = 0;
+	this->v.reserve(0);
 }
 
 Span::Span(unsigned int N)
 {
 	this->capacity = N;
 	this->stored = 0;
+	this->v.reserve(N);
 }
 
 Span::Span(const Span &copy)
