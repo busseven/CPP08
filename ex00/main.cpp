@@ -6,11 +6,11 @@
 /*   By: busseven <busseven@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/16 18:21:09 by busseven          #+#    #+#             */
-/*   Updated: 2026/08/19 12:14:34 by busseven         ###   ########.fr       */
+/*   Updated: 2026/09/08 13:41:51 by busseven         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "easyfind.tpp"
+#include "easyfind.hpp"
 #include <vector>
 #include <stack>
 #include <list>
