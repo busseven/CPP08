@@ -6,7 +6,7 @@
 /*   By: busseven <busseven@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/20 09:46:12 by busseven          #+#    #+#             */
-/*   Updated: 2026/09/08 14:36:29 by busseven         ###   ########.fr       */
+/*   Updated: 2026/09/08 14:39:43 by busseven         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,6 @@ Span::~Span()
 // Operators
 Span & Span::operator=(const Span &assign)
 {
-	this->v.reserve(assign.getCapacity());
 	this->v = assign.v;
 	this->stored = this->v.size();
 	return *this;
